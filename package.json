@@ -1,6 +1,6 @@
 {
   "name":"client-test",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "main": "./lib/clientTest.js",
   "dependencies": {
     "async": "0.1.18",
@@ -9,7 +9,7 @@
     "jStat":"0.0.2"
   },
   "engines": {
-    "node" :  "0.9.12",
+    "node" :  "0.10.36",
     "phantomjs" : "1.9.*"
-  }  
+  }
 }
