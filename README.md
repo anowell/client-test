@@ -1,5 +1,7 @@
-client-test
+zerg-rush
 ===========
+
+**Unleash a Zerg Rush at your web app/service/api**
 
 An extensible web client for functional, comparative, and performance testing.
 
@@ -7,11 +9,12 @@ An extensible web client for functional, comparative, and performance testing.
 Key features
 ------------
 
-- Concurrent GET requests to any URLs (via node http and https libraries)
-    - Asserting based on response body, header, status
-    - Asserting based on comparison of responses from 2 or more URLs
+- Concurrent requests to any URLs (via nodejs)
+    - Asserting based on response body, header, status (extensible)
+    - Asserting based on comparison of responses from 2 or more URLs (extensible)
     - Response perf logging (request start, first byte received, last byte received)
-- Concurrent requests with responses loaded by PhantomJS
+    - Response time statistics (various percentiles and deviations)
+- Concurrent requests with responses loaded by PhantomJS (less-tested)
     - Asserting based on status or phantomjs page object (i.e. executing JS against DOM)
     - Asserting based on comparison of 2 or more URLs via scripting against each page in phantomjs
     - DOM performance logging (request start, DOM load start, DOM load complete, actions within a loaded DOM)
@@ -23,22 +26,22 @@ Key features
 Usage
 -----
 
-Tested with Node v0.9.x - need to update for phantomjs-node fix that supports later versions
+Tested with Node v0.10.x
 
 Install PhantomJS (required if using phantomDriver)
 
 Basic usage:
 
-    var clientTest = require(‘client-test’);
-    var runOptions = { 
+    var zergRush = require(‘zerg-rush’);
+    var runOptions = {
         generatorContext : { inputFile : ‘./input/list-of-urls.txt’ },
         concurrency : 10
     };
-    clientTest.run( runOptions, function() { console.log(“Finished testing”); });
-    
+    zergRush.run( runOptions, function() { console.log(“Finished testing”); });
+
 
 
 TODO
 ----
 
-Document the included components as well as how to extend client-test with new components: (drivers, generators, assertions, comparators).
+Document the included components as well as how to extend zerg-rush with new components: (drivers, generators, assertions, comparators).

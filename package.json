@@ -1,7 +1,7 @@
 {
-  "name":"client-test",
+  "name":"zerg-rush",
   "version": "0.1.0",
-  "main": "./lib/clientTest.js",
+  "main": "./lib/zergRush.js",
   "dependencies": {
     "async": "0.1.18",
     "phantom":"0.4.1",
