@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "main": "./lib/zergRush.js",
   "dependencies": {
-    "async": "0.1.18",
+    "async": "0.9.*",
     "phantom":"0.4.1",
-    "lodash":"1.2.1",
-    "jStat":"0.0.2"
+    "lodash":"3.4.*",
+    "jStat":"1.1.*"
   },
   "engines": {
-    "node" :  "0.10.36",
+    "node" :  "0.10.*",
     "phantomjs" : "1.9.*"
   }
 }
