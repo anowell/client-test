@@ -40,6 +40,44 @@ Basic usage:
     zergRush.run( runOptions, function() { console.log(“Finished testing”); });
 
 
+### Test Definition
+
+```javascript
+{
+    name: "My Test Name"
+    testUrl: "http://example.com",
+    assert: [
+        {
+            check: "checkName",
+            expect: "expectValue",
+        }
+    ],
+    driver: "nodeRequest",
+    driverOptions: {}
+}
+```
+
+Note: ignoring `testUrls` and `compare` features for now - considering them for deprecation, or refactoring into a separate runner, because they add complexity and using them invalidates much of the perf data that is collected.
+
+TODO: deprecate `[{check: "checkName", expect: "expectValue"}]` in favor of: `[{checkName: "expectValue"}]`
+(consider allowing without array if order doesn't matter)
+
+### NodeRequest DriverOptions
+
+```javascript
+{
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json",
+    },
+    auth: "user:password",
+    data: "some data to post - could even be a JS object"
+    timeout: 60,
+    logResponse: true,
+    consoleResponse: false,
+    tag: "perfTag1"
+}
+```
 
 TODO
 ----

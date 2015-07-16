@@ -1,6 +1,6 @@
 {
   "name":"zerg-rush",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "./lib/zergRush.js",
   "dependencies": {
     "async": "0.9.*",
