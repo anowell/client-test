@@ -3,7 +3,7 @@ zerg-rush
 
 **Unleash a Zerg Rush at your web app/service/api**
 
-An extensible web client for functional, comparative, and performance testing.
+An extensible web client for functional, and performance testing.
 
 
 Key features
@@ -74,4 +74,4 @@ Basic usage:
 TODO
 ----
 
-Document the included components as well as how to extend zerg-rush with new components: (drivers, generators, assertions, comparators).
+Document the included components as well as how to extend zerg-rush with new components: (drivers, generators, assertions).
